@@ -50,6 +50,8 @@ spec:
       default: "{}"
     - name: pipeline-debug
       default: "0"
+    - name: app-url
+      default: "."          
   workspaces:
     - name: pipeline-ws
   tasks:
@@ -332,4 +334,5 @@ spec:
       runAfter: [deploy-application]
       params:
         - name: app-url
-          value: $(tasks.deploy-application.results.app-url)
+          value: $(params.app-url)
+          # value: $(tasks.deploy-application.results.app-url)

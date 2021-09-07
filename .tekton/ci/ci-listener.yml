@@ -50,6 +50,8 @@ spec:
       description: service binding JSON for the application deployment
       default: "{}"
     - name: pipeline-debug
+    - name: app-url
+      default: "."    
   resourcetemplates:
     - apiVersion: v1
       kind: PersistentVolumeClaim
@@ -108,6 +110,8 @@ spec:
             value: $(params.service-bindings)
           - name: pipeline-debug
             value: $(params.pipeline-debug)
+          - name: app-url
+            value: $(params.app-url)  
         workspaces:
           - name: pipeline-ws
             persistentVolumeClaim:
