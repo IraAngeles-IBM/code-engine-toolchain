@@ -38,8 +38,8 @@ services:
     service_id: $env.source_provider || 'hostedgit'
     parameters:
       repo_name: '{{toolchain.name}}-pipeline'
-      repo_url: 'https://github.com/open-toolchain/code-engine-toolchain'
-      source_repo_url: 'https://github.com/open-toolchain/code-engine-toolchain'
+      repo_url: 'https://github.com/IraAngeles-IBM/code-engine-toolchain'
+      source_repo_url: 'https://github.com/IraAngeles-IBM/code-engine-toolchain'
       type: 'clone'
       has_issues: false
       enable_traceability: false
